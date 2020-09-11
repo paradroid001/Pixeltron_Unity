@@ -601,11 +601,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2104026709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3355d5801697f6a4a9e2052b29334145, type: 3}
+  m_Script: {fileID: 11500000, guid: 8181b082c74194f43a0c81395a3683fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockCursorOnStart: 1
-  dragDeadspot: 0.05
+  movementSpeed: 2
+  rotationSpeed: 2
+  constrainPhysics: 1
 --- !u!136 &2104026711
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -707,12 +708,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2104026709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4068959eddf7b2347a7a8be54a06f3c4, type: 3}
+  m_Script: {fileID: 11500000, guid: d226623f910d8a64db031891567afad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
-  rotationSpeed: 2
-  constrainPhysics: 1
 --- !u!81 &2104026718
 AudioListener:
   m_ObjectHideFlags: 0
@@ -730,14 +728,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2104026709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a8f1f8ea2e869f498830cd0af2eaa3e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0003e9b50b45db94a8167e4d39f8be96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tpCam: {fileID: 963194227}
   camFocus: {fileID: 2104026714}
   camPosRoot: {fileID: 1862664493}
   camPosition: {fileID: 1558639023}
-  camMoveSpeed: 0.355
+  camMoveSpeed: 0.541
   camMinDist: 1
   camMaxDist: 30
   camZoomSpeed: 0.5
@@ -754,6 +752,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2104026709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8083a60c2e4364468446cd06f463ef6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3921bbcb59f49414b8e0e9f512ce2c1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockCursorOnStart: 1
+  dragDeadspot: 0.05

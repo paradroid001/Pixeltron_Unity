@@ -1,6 +1,6 @@
 #This library is intended to be used as a git submodule.
 #*.meta files should be ignored.
-*.meta 
+#*.meta 
 
 # These are some examples of commonly ignored file patterns.
 # You should customize this list as applicable to your project.
