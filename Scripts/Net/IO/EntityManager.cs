@@ -90,25 +90,38 @@ namespace Pixeltron.Net.IO
             return retval;
         }
 
-        //TODO: this is trash. Should be able to query some nice way.
-        //also shouldn't need to include RUINS types in Pixeltron code.
+        //TODO: This is a little hard. Currently the example game
+        //Ruins implements this method with Items that it wants to
+        //query. We can't implement it at this level because Item is a
+        //Ruins class, and we don't want to know about that class at this
+        //level. We can't pass class constraints because they can't be
+        //further specified by an overriding method. Really what we want is
+        //for the code which traverses entities etc to look for ownership
+        //to happen here, and be hidden from 'clients' as they shouldn't
+        //need to care. But no class in Pixeltron.Entities has a concept
+        //of ownership. The true fix would probably be inventing this type
+        //and having client games inherit from it for their items and other
+        //owned types.
         /*
-        public List<Item> GetItemsOwnedBy(int nid)
+        public virtual List<T> GetItemsOwnedBy<T>(int nid)
         {
-            List<Item> retval = new List<Item>();
+            
+            List<T> retval = new List<T>();
+            
             foreach (int enid in _entities.Keys)
             {
                 EntityIO ent = _entities[enid];
-                if (ent is Item)
+                if (ent is T)
                 {
-                    Item item = ent as Item;
+                    T item = ent as T;
                     if (item.oNid == nid)
                         retval.Add(item);
                 }
             }
+            
             return retval;
-        }
-        */
+        }*/
+        
 
         public void CreateEntity(int nid, string typename, JSONObject data)
         {
